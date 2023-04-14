@@ -18,16 +18,18 @@
       ul li {
   padding: 8px 16px;
   border-bottom: 1px solid #ddd;
-  background-color: rgb(62, 81, 138);
-  opacity: 0.75;
-  width: 50%;
+  border-radius: 15px;
+  background-color: #171b94;
+  color: white;
+  opacity: 0.7;
+  width: 30%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
       </style>
 </head>
-<body style="background-image: url('back.jpg');">
+<body style="background-image: url('back.jpg'); background-size: cover;">
   <a href="/categories" class="button">Retour vers les catégories</a>
   <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0" class="button">Plan</a>
   <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
@@ -37,13 +39,13 @@
     <ul >
         <% for (var i = 0; i < prodBycategory.length; i++) { %>
             <li><%= prodBycategory[i].productName %></li>
-          <li><%= prodBycategory[i].productPrice %> euros</li>
+          <li><%= prodBycategory[i].productPrice %> &euro;</li>
         <p></p>
         <% } %>
         
       </ul>
       <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris  </p>
-      <p style="color: #3f44a7; font-size: 300%;text-align:center">Nous vous attendons!!!!</p>
+     <!--  <p style="color: #3f44a7; font-size: 200%;text-align:center">Nous vous attendons!!!!</p> -->
     <!-- <p>poster un produit: 6437f2c73e504a5fdb353b91</p>
     <p>Ou 6436f69682543f2fc7572816</p>
     <p>Ou 6437b450dd277194d64786cb</p>
