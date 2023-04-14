@@ -27,7 +27,7 @@ export const getProduct0=async(req,res,next)=>{
 }
 
 export const getProduct1=async(req,res,next)=>{
-    const prodBycategory=await Product.find(({ownedbyCategory:'6437f2c73e504a5fdb353b91'}));
+    const prodBycategory=await Product.find(({ownedbyCategory:'6437b361dd277194d64786c9'}));
     console.log(prodBycategory);
     res.status(201).render("CategoryView/viewProducts",{
         title:"ProductList",

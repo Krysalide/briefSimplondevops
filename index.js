@@ -26,6 +26,9 @@ app.get("/",(req,res)=>{
 app.use(homepageroutes);
 app.use(CategoryRouteur);
 app.use(ProductRouteur);
+app.get("/postProduct", function(req, res) {
+    res.render("postProduct");
+  });
 
 
 

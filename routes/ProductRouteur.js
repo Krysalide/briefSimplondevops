@@ -10,6 +10,7 @@ routeur.get("/page1",getProduct1);
 routeur.get("/page2",getProduct2);
 routeur.get("/page3",getProduct3);
 
+
 routeur.put("/updateProduct",updateProduct);
 //routeur.delete("/deleteProduct",deleteProduct);
 routeur.post("/deleteProduct",deleteProduct);
