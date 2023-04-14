@@ -64,7 +64,8 @@ export const update=async (req,res,next)=>{
     console.log("body:  "+categoryName);
     const updateCategory=await Category.updateOne({categoryName:req.body[1].categoryName},
     {categoryName:categoryName});
-    console.log("update success")
+    console.log("update success");
+    res.status(201).json({updateCategory});
 };
 
 export const deleteCategory=async (req,res,next)=>{
@@ -74,6 +75,7 @@ export const deleteCategory=async (req,res,next)=>{
 
 
     console.log("delete success!!");
+    res.status(201).json({deleteCategory});
 
 }
 

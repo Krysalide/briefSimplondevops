@@ -5,19 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
+<style>
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  </style>
 </head>
-<body style="background-image: url('woman.jpg');">
-    <p style="color: rgb(30, 30, 109); font-size: 400%;text-align:center">INSTITUT BIOPARIS </p>
-    <p style="color: rgb(189, 26, 162); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
+<body style="background-image: url('back.jpg');">
+    <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
+    <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
     
-     
-     <p>liste </p>
-     <p>Nombre d'éléments dans la liste: <%= categories.length %></p>
+    
+    
+    <!--  <p>Nombre d'éléments dans la liste: <%= categories.length %></p> -->
      <% if (categories && categories.length) { %>
-        <ul style="text-align: center;">
+        <ul style="text-align: center;list-style-type: none;">
           <% for (var i = 0; i < categories.length; i++) { %>
             <li><%= categories[i].categoryName %></li>
-            <button>Cliquez pour voir produits</button>
+            <!-- <a href="/prods" class="button">Voir produits</a> -->
             <p></p>
           <% } %>
           
@@ -25,6 +36,10 @@
       <% } else { %>
         <p>No categories found.</p>
       <% } %>
+
+      <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris  </p>
+      <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Nous vous attendons!!!!</p>
+
       
 
       
