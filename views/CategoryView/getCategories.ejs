@@ -15,6 +15,9 @@
     text-decoration: none;
     border-radius: 5px;
   }
+  ul li{
+    color: rgb(39, 39, 134);
+  }
   </style>
 </head>
 <body style="background-image: url('back.jpg');">
@@ -25,10 +28,11 @@
     
     <!--  <p>Nombre d'éléments dans la liste: <%= categories.length %></p> -->
      <% if (categories && categories.length) { %>
-        <ul style="text-align: center;list-style-type: none;">
+        <ul style="text-align: center;list-style-type: none;font-size: 200%;color:rgb(24, 24, 74)">
           <% for (var i = 0; i < categories.length; i++) { %>
             <li><%= categories[i].categoryName %></li>
-             <a href="/prods" class="button">Voir produits</a> 
+            
+            <a href="/page<%= i %>" class="button">Voir produits</a>
             <p></p>
           <% } %>
           

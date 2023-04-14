@@ -10,11 +10,14 @@ const __dirname=path.resolve();
 //const express=require("express");
 
 const app=express();
-app.use(bodyParser.json());
+//const bodyParser= require('body-parser');
+
 dotenv.config();
 ConnectDB();
 app.set("view engine","ejs");
 app.set("views","views");
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"public")));
 /* app.use(express.static(path.join(__dirname,"public")));
 app.get("/",(req,res)=>{
@@ -23,6 +26,7 @@ app.get("/",(req,res)=>{
 app.use(homepageroutes);
 app.use(CategoryRouteur);
 app.use(ProductRouteur);
+
 
 
 
