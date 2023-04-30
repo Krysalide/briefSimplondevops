@@ -13,7 +13,7 @@
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        display: block;
+      display: block;
        margin-left: auto;
        margin-right: auto;
        width: 12%;
@@ -24,36 +24,18 @@
 </head>
 <body style="background-image: url('back.jpg');">
   <a href="/" class="button" >Acceuil</a>
-    <!-- <p>poster un produit: 6437f2c73e504a5fdb353b91  beauté des mains</p>
-    <p>Ou 6436f69682543f2fc7572816 Maquillage</p>
-    <p>Ou 6437b450dd277194d64786cb  Soins du corps</p>
-    <p>Ou 6437b361dd277194d64786c9  Soins du visage</p>
-    <form action="/addProduct" method="POST">
-      <label for="productName">ProductName: </label>
-      <input type="text" id="productName" name="productName" required>
-
-      <label for="categoryId">categoryId: </label>
-      <input type="text" id="categoryId" name="categoryId" required>
-
-      <label for="productPrice">Price: </label>
-      <input type="number" id="productPrice" name="productPrice" required>
-
-      <input type="submit" value="Poster sur MongodB">
-    </form>  -->
-    
+   
     <p>Ajouter un produit</p>
     <form action="/addProduct" method="POST">
       <label for="productName">ProductName: </label>
       <input type="text" id="productName" name="productName" required>
-    
       <label for="categoryId">Category du Produit </label>
       <select id="categoryId" name="categoryId" required>
-        <option value="6436f69682543f2fc7572816">Maquillage</option>
-        <option value="6437b361dd277194d64786c9">Soins du Visage</option>
-        <option value="6437b450dd277194d64786cb">Soins du corps</option>
-        <option value="6437f2c73e504a5fdb353b91">Beauté des mains</option>
+      <option value="6436f69682543f2fc7572816">Maquillage</option>
+      <option value="6437b361dd277194d64786c9">Soins du Visage</option>
+      <option value="6437b450dd277194d64786cb">Soins du corps</option>
+      <option value="6437f2c73e504a5fdb353b91">Beauté des mains</option>
       </select>
-    
       <label for="productPrice">Price: </label>
       <input type="number" id="productPrice" name="productPrice" required>
     
@@ -63,9 +45,6 @@
     <form action="/deleteProduct" method="POST">
       <label for="productName">ProductName: </label>
       <input type="text" id="productName" name="productName" required>
-
-    
-
       <input type="submit" value="Supprimmer produit dans MongoDB">
     </form>
     

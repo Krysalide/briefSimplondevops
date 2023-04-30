@@ -68,13 +68,26 @@ export const updateProduct=async (req,res,next)=>{
         res.status(201).json({upProduct});
 }
 
-export const deleteProduct=async (req,res,next)=>{
+/* export const deleteProduct=async (req,res,next)=>{
     const productNameEntered=req.body.productName;
     console.log("Postman body:  "+productNameEntered);
-    const deleteProduct=await Product.deleteOne({productName:productNameEntered});
-
-
+    const deleteProductx=await Product.deleteOne({productName:productNameEntered});
     console.log("delete success!!");
-    res.status(201).json({deleteProduct});
+    
+    await res.status(201).json({deleteProduct});
+    
 
-}
+} */
+export const deleteProduct = async (req, res, next) => {
+    const productNameEntered = req.body.productName;
+    console.log("Postman body:  " + productNameEntered);
+    try {
+      const deleteProductResult = await Product.deleteOne({
+        productName: productNameEntered,
+      });
+      console.log("delete success!!");
+      res.redirect('/');
+    } catch (error) {
+      next(error);
+    }
+  }
