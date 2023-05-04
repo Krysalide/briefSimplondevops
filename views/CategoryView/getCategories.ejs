@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
 
-<style>
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3d24aa;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  ul li{
-    color: rgb(65, 25, 103);
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+
+  <style>
+    .button {
+
+      padding: 10px 20px;
+      background-color: #4e52c3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12%;
+      text-align: center;
+
+    }
+
+    ul li {
+      color: rgb(65, 25, 103);
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 0.8;
+      background-color: rgb(212, 212, 148);
+    }
+
+    nav>*:last-child {
+      margin-right: auto;
+    }
   </style>
 </head>
+
 <body style="background-image: url('back.jpg');">
-  <a href="/" class="button" >Acceuil</a>
-    <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
-    <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
-    
-    
-    
-    <!--  <p>Nombre d'éléments dans la liste: <%= categories.length %></p> -->
-     <% if (categories && categories.length) { %>
-        <ul style="text-align: center;list-style-type: none;font-size: 200%;color:rgb(24, 24, 74)">
-          <% for (var i = 0; i < categories.length; i++) { %>
-            <li><%= categories[i].categoryName %></li>
-            
-            <a href="/page<%= i %>" class="button">Voir produits</a>
-            <p></p>
-          <% } %>
-          
-        </ul>
-      <% } else { %>
-        <p>No categories found.</p>
+  <nav>
+
+    <a href="/" class="button">Acceuil</a>
+    <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
+      class="button">Plan</a>
+    <a href="mailto:institut-paris@gmail.com" class="button">Contactez nous par mail!!!</a>
+    <a href="/categories" class="button">Retour vers les catégories</a>
+  </nav>
+
+
+  <!-- <a href="/" class="button" >Acceuil</a> -->
+  <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
+  <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
+
+
+
+  <!--  <p>Nombre d'éléments dans la liste: <%= categories.length %></p> -->
+  <% if (categories && categories.length) { %>
+    <ul style="text-align: center;list-style-type: none;font-size: 200%;color:rgb(24, 24, 74)">
+      <% for (var i=0; i < categories.length; i++) { %>
+        <li>
+          <%= categories[i].categoryName %>
+        </li>
+
+        <a href="/page<%= i %>" class="button">Voir produits</a>
+        <p></p>
+        <% } %>
+
+    </ul>
+    <% } else { %>
+      <p>No categories found.</p>
       <% } %>
 
-      <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris  </p>
-      <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Nous vous attendons!!!!</p>
+        <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris
+        </p>
+        <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Nous vous attendons!!!!</p>
 
-      
 
-      
-      
 
-    
 
-     
-     
+
+
+
+
+
+
 </body>
+
 </html>

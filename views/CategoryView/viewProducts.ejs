@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <style>
-      .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #3d24aa;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-      ul {text-align: center; list-style-type: none; font-size: 200%;opacity: 1;color: beige; }
-      ul li {
-  padding: 8px 16px;
-  border-bottom: 1px solid #ddd;
-  border-radius: 15px;
-  background-color: #171b94;
-  color: white;
-  opacity: 0.7;
-  width: 30%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-      </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <style>
+    .button {
+
+      padding: 10px 20px;
+      background-color: #4e52c3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12%;
+      text-align: center;
+
+    }
+
+    ul {
+      text-align: center;
+      list-style-type: none;
+      font-size: 200%;
+      opacity: 1;
+      color: beige;
+    }
+
+    ul li {
+      padding: 8px 16px;
+      border-bottom: 1px solid #ddd;
+      border-radius: 15px;
+      background-color: #171b94;
+      color: white;
+      opacity: 0.7;
+      width: 30%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 0.8;
+      background-color: rgb(212, 212, 148);
+    }
+
+    nav>*:last-child {
+      margin-right: auto;
+    }
+  </style>
 </head>
+
 <body style="background-image: url('back.jpg'); background-size: cover;">
-  <a href="/categories" class="button">Retour vers les catégories</a>
-  <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0" class="button">Plan</a>
+
+  <nav>
+
+    <a href="/" class="button">Acceuil</a>
+    <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
+      class="button">Plan</a>
+    <a href="mailto:institut-paris@gmail.com" class="button">Contactez nous par mail!!!</a>
+    <a href="/categories" class="button">Retour vers les catégories</a>
+  </nav>
+
+
+
+  
   <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
   <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
 
-    <!-- <p>Nombre d'éléments dans la liste: <%= prodBycategory.length %></p> -->
-    <ul >
-        <% for (var i = 0; i < prodBycategory.length; i++) { %>
-            <li><%= prodBycategory[i].productName %></li>
-          <li><%= prodBycategory[i].productPrice %> &euro;</li>
-        <p></p>
-        <% } %>
-        
-      </ul>
-      <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris  </p>
-     <!--  <p style="color: #3f44a7; font-size: 200%;text-align:center">Nous vous attendons!!!!</p> -->
-    <!-- <p>poster un produit: 6437f2c73e504a5fdb353b91</p>
-    <p>Ou 6436f69682543f2fc7572816</p>
-    <p>Ou 6437b450dd277194d64786cb</p>
-    <p>Ou 6437b361dd277194d64786c9</p>
-    <form action="/addProduct" method="POST">
-      <label for="productName">ProductName: </label>
-      <input type="text" id="productName" name="productName" required>
+  <!-- <p>Nombre d'éléments dans la liste: <%= prodBycategory.length %></p> -->
+  <ul>
+    <% for (var i=0; i < prodBycategory.length; i++) { %>
+      <li>
+        <%= prodBycategory[i].productName %>
+      </li>
+      <li>
+        <%= prodBycategory[i].productPrice %> &euro;
+      </li>
+      <p></p>
+      <% } %>
 
-      <label for="categoryId">categoryId: </label>
-      <input type="text" id="categoryId" name="categoryId" required>
+  </ul>
+  <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris </p>
 
-      <label for="productPrice">Price: </label>
-      <input type="number" id="productPrice" name="productPrice" required>
 
-      <input type="submit" value="Submit">
-    </form> 
-    <p>Supprimmer un produit</p> 
-    <form action="/deleteProduct" method="POST">
-      <label for="productName">ProductName: </label>
-      <input type="text" id="productName" name="productName" required>
 
-    
 
-      <input type="submit" value="Delete">
-    </form> -->
-    
-    
 
-  
 </body>
+
 </html>

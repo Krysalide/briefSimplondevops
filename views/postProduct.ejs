@@ -1,52 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      .button {
-        
-        padding: 10px 20px;
-        background-color: #4e52c3;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-      display: block;
-       margin-left: auto;
-       margin-right: auto;
-       width: 12%;
-       text-align: center;
-        
-      }
-      </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button {
+
+padding: 10px 20px;
+background-color: #4e52c3;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 12%;
+text-align: center;
+
+}
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 0.8;
+      background-color: rgb(212, 212, 148);
+    }
+
+    nav>*:last-child {
+      margin-right: auto;
+    }
+  </style>
 </head>
+
 <body style="background-image: url('back.jpg');">
-  <a href="/" class="button" >Acceuil</a>
-   
-    <p>Ajouter un produit</p>
-    <form action="/addProduct" method="POST">
-      <label for="productName">ProductName: </label>
-      <input type="text" id="productName" name="productName" required>
-      <label for="categoryId">Category du Produit </label>
-      <select id="categoryId" name="categoryId" required>
+  <nav>
+
+    <a href="/" class="button">Acceuil</a>
+    <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
+      class="button">Plan</a>
+    
+    <a href="/categories" class="button">Retour vers les catégories</a>
+  </nav>
+
+  
+
+  <p>Ajouter un produit</p>
+  <form action="/addProduct" method="POST">
+    <label for="productName">ProductName: </label>
+    <input type="text" id="productName" name="productName" required>
+    <label for="categoryId">Category du Produit </label>
+    <select id="categoryId" name="categoryId" required>
       <option value="6436f69682543f2fc7572816">Maquillage</option>
       <option value="6437b361dd277194d64786c9">Soins du Visage</option>
       <option value="6437b450dd277194d64786cb">Soins du corps</option>
       <option value="6437f2c73e504a5fdb353b91">Beauté des mains</option>
-      </select>
-      <label for="productPrice">Price: </label>
-      <input type="number" id="productPrice" name="productPrice" required>
-    
-      <input type="submit" value="Poster sur MongodB">
-    </form>
-    <p>Supprimer un produit par nom</p> 
-    <form action="/deleteProduct" method="POST">
-      <label for="productName">ProductName: </label>
-      <input type="text" id="productName" name="productName" required>
-      <input type="submit" value="Supprimmer produit dans MongoDB">
-    </form>
-    
-   
+    </select>
+    <label for="productPrice">Price: </label>
+    <input type="number" id="productPrice" name="productPrice" required>
+
+    <input type="submit" value="Poster sur MongodB">
+  </form>
+  <p>Supprimer un produit par nom</p>
+  <form action="/deleteProduct" method="POST">
+    <label for="productName">ProductName: </label>
+    <input type="text" id="productName" name="productName" required>
+    <input type="submit" value="Supprimmer produit dans MongoDB">
+  </form>
+
+
 </html>

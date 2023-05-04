@@ -6,6 +6,7 @@ import CategoryRouteur from "./routes/CategoryRouter.js";
 import ProductRouteur from "./routes/ProductRouteur.js";
 import ConnectDB from "./config/ConnectDB.js";
 import bodyParser from 'body-parser';
+
 const __dirname=path.resolve();
 //const express=require("express");
 
@@ -23,6 +24,11 @@ app.use(express.static(path.join(__dirname,"public")));
 app.get("/",(req,res)=>{
     res.send("hello world!!");
 }); */
+/* const path = require('path');
+
+
+
+const rootDir = path.join(__dirname, '/'); */
 app.use(homepageroutes);
 app.use(CategoryRouteur);
 app.use(ProductRouteur);
