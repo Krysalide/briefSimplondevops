@@ -1,7 +1,7 @@
 variables: 
-   # IMAGE_NAME: christophedelapierre/briefdevo
-    IMAGE_NAME: $IMAGE_NAME
-    IMAGE_TAG:  $IMAGE_TAG
+    IMAGE_NAME: christophedelapierre/briefdevo
+    #IMAGE_NAME: $IMAGE_NAME
+    IMAGE_TAG:  latest
     # MONGODB_URI: mongodb+srv://christophedelapierresimplon:DFf0uvbc1bqGUwMj@clustersimplonchristoph.btp4k2s.mongodb.net/
     MONGODB_URI: $MONGODB_URI
 
@@ -24,7 +24,7 @@ build_image:
     before_script:
         -  docker login -u $REGISTRY_USER -p $REGISTRY_PASS
     script:
-        -  docker build  -t $IMAGE_NAME:$IMAGE_TAG .
-        #-  docker build -t christophedelapierre/briefdevo:latest . 
+        #-  docker build  -t $IMAGE_NAME:$IMAGE_TAG .
+        -  docker build -t christophedelapierre/briefdevo:latest . 
         -  docker push $IMAGE_NAME:$IMAGE_TAG
 
