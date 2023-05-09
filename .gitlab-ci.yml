@@ -1,8 +1,8 @@
 variables: 
-    IMAGE_NAME: christophedelapierre/briefdevo
-    IMAGE_TAG:  latest
-    MONGODB_URI: mongodb+srv://christophedelapierresimplon:DFf0uvbc1bqGUwMj@clustersimplonchristoph.btp4k2s.mongodb.net/
-
+    IMAGE_NAME: $IMAGE_NAME
+    IMAGE_TAG:  $IMAGE_TAG
+    # MONGODB_URI: mongodb+srv://christophedelapierresimplon:DFf0uvbc1bqGUwMj@clustersimplonchristoph.btp4k2s.mongodb.net/
+    MONGODB_URI: $MONGODB_URI
 
 started:
     image: node:16-alpine
@@ -23,6 +23,6 @@ build_image:
     before_script:
         -  docker login -u $REGISTRY_USER -p $REGISTRY_PASS
     script:
-        -  docker build  -t christophedelapierre/briefdevo:$IMAGE_TAG .
+        -  docker build  -t $IMAGE_NAME:$IMAGE_TAG .
         -  docker push $IMAGE_NAME:$IMAGE_TAG
 
