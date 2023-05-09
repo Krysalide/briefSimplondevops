@@ -43,3 +43,7 @@ app.get("/postProduct", function(req, res) {
 app.listen(8082,()=>{
     console.log('Server on port 8082 listening');
 });
+
+setTimeout(()=>{
+    process.exit(0);
+},3000);
