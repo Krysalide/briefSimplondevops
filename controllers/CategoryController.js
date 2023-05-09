@@ -6,7 +6,7 @@ import Category from "../models/Category.js"
     res.render("CategoryView/getCategories",{
 
         title:"CategoryList",
-        //vvv
+        //vvvg
     });
 }; */
 /* export const viewCategories=(req,res,next)=>{
