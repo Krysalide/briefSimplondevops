@@ -1,0 +1,28 @@
+variables: 
+    IMAGE_NAME: eyangondjip/brief
+    IMAGE_TAG:  latest
+    MONGODB_URI: mongodb+srv://$MONGODB_USER:$MONGODB_PASS@cluster0.btnwi02.mongodb.net/brief
+
+
+started:
+    image: node:16-alpine
+    before_script:
+        - apt-get update && apt-get install nodejs
+        - npm install
+    script:
+        - npm run start
+
+
+build_image:
+    image: docker:20.10.16
+    services:
+        - docker:20.10.16-dind
+        - mongo
+    variables:
+        DOCKER_TLS_CERTDIR: "/certs"
+    before_script:
+        -  docker login -u $REGISTRY_USER -p $REGISTRY_PASS
+    script:
+        -  docker build  -t $IMAGE_NAME:$IMAGE_TAG .
+        -  docker push $IMAGE_NAME:$IMAGE_TAG
+
