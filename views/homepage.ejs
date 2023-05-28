@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,38 +6,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%=title%>
-    </title>
+    <title><%=title%></title>
     <style>
-        .button {
+     
+    .button {
+      padding: 10px 20px;
+      background-color: #4e52c3;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 12%;
+      text-align: center;
+    }
 
-            padding: 10px 20px;
-            background-color: #4e52c3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12%;
-            text-align: center;
+    ul li {
+      color: rgb(65, 25, 103);
+    }
 
-        }
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 0.8;
+      background-color: rgb(212, 212, 148);
+    }
 
-        nav {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            opacity: 0.8;
-            background-color: rgb(212, 212, 148);
-        }
+    nav a {
+      margin-right: 10px;
+    }
+    p{
+        color: rgb(30, 30, 109);
+         font-size: 500%;
+         text-align:center
+    }
+    #firstline {
+      color: rgb(30, 30, 109);
+      font-size: 500%;
+      text-align: center;
+    }
 
-        nav>*:last-child {
-            margin-right: auto;
-        }
+ /*    
+    @media screen and (max-width: 768px) {
+      .button {
+        width: 80%;
+        font-size: 80%;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+      #firstline {
+        
+        font-size: 3rem;
+      }
+      .button-small {
+                width: 70%;
+                font-size: 60%;
+                margin-bottom: 10px;
+                text-align: center;
+                margin-right: auto;
+                margin-left: auto;
+                
+            }
+    }
+
+    
+    @media screen and (max-width: 480px) {
+      .button {
+        width: 90%;
+        font-size: 70%;
+        margin-bottom: 15px;
+        margin-right: 5px;
+      }
+      #firstline {
+        font-size: 2rem;
+        
+      }
+      .button-small {
+                width: 70%;
+                font-size: 60%;
+                margin-bottom: 10px;
+                text-align: center;
+                margin-right: auto;
+    margin-left: auto;
+            }
+    }
+     */
+     @media screen and (max-width: 768px) {
+  .button {
+    width: 80%;
+    font-size: 80%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #firstline {
+    font-size: 3rem;
+  }
+  .button-small {
+    width: 70%;
+    font-size: 60%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    width: 90%;
+    font-size: 70%;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #firstline {
+    font-size: 2rem;
+  }
+  .button-small {
+    width: 70%;
+    font-size: 60%;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+   
+    
     </style>
 </head>
+
 
 <body style="background-image: url('back.jpg');">
     <nav>
@@ -44,21 +147,22 @@
         <a href="/" class="button">Acceuil</a>
         <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
             class="button">Plan</a>
-        <a href="mailto:institut-paris@gmail.com" class="button">Contactez nous par mail!!!</a>
+        <a href="mailto:institut-paris@gmail.com" class="button">Contact</a>
         
     </nav>
 
-    <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
-    <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
-    <a href="/categories" class="button">Nos catégories</a>
+    <p id="firstline" >INSTITUT BIOPARIS </p>
+    <!-- <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p> -->
+    <p id="firstline">Tous nos produits sont bio et vegan!</p>
+    <a  href="/categories" class="button button-small">Nos catégories</a>
 
-    <p style="color: rgb(30, 30, 109); font-size: 300%;text-align:center">Notre adresse: 9 Rue du centre 75000 Paris
+    <p id="firstline">Notre adresse: 9 Rue du centre 75000 Paris
     </p>
-    <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Nous vous attendons!!!!</p>
-    <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
-        class="button">Plan</a>
+    <p id="firstline">Nous vous attendons!!!!</p>
+    <a  href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
+        class="button button-small">Plan</a>
     <p></p>
-    <a href="/postProduct" class="button">DashBoard</a>
+    <a  href="/postProduct" class="button button-small">DashBoard</a>
 
 </body>
 

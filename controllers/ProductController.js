@@ -16,7 +16,7 @@ export const postProduct=async (req,res,next)=>{
 }
 export const getProduct0=async(req,res,next)=>{
     const prodBycategory=await Product.find(({ownedbyCategory:'6436f69682543f2fc7572816'}));
-    console.log(prodBycategory);
+ 
     res.status(201).render("CategoryView/viewProducts",{
         title:"ProductList",
        
@@ -28,7 +28,7 @@ export const getProduct0=async(req,res,next)=>{
 
 export const getProduct1=async(req,res,next)=>{
     const prodBycategory=await Product.find(({ownedbyCategory:'6437b361dd277194d64786c9'}));
-    console.log(prodBycategory);
+   // console.log(prodBycategory);
     res.status(201).render("CategoryView/viewProducts",{
         title:"ProductList",
        
@@ -39,7 +39,7 @@ export const getProduct1=async(req,res,next)=>{
 }
 export const getProduct2=async(req,res,next)=>{
     const prodBycategory=await Product.find(({ownedbyCategory:'6437b450dd277194d64786cb'}));
-    console.log(prodBycategory);
+  //  console.log(prodBycategory);
     res.status(201).render("CategoryView/viewProducts",{
         title:"ProductList",
        
@@ -50,7 +50,7 @@ export const getProduct2=async(req,res,next)=>{
 }
 export const getProduct3=async(req,res,next)=>{
     const prodBycategory=await Product.find(({ownedbyCategory:'6437f2c73e504a5fdb353b91'}));
-    console.log(prodBycategory);
+   // console.log(prodBycategory);
     res.status(201).render("CategoryView/viewProducts",{
         title:"ProductList",
        

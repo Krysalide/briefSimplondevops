@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
+  <title><%= title %></title>
 
   <style>
-    .button {
-
+  
+     .button {
       padding: 10px 20px;
       background-color: #4e52c3;
       color: white;
@@ -22,7 +21,6 @@
       margin-right: auto;
       width: 12%;
       text-align: center;
-
     }
 
     ul li {
@@ -37,8 +35,26 @@
       background-color: rgb(212, 212, 148);
     }
 
-    nav>*:last-child {
-      margin-right: auto;
+    nav a {
+      margin-right: 10px;
+    }
+
+    /* Media queries for smaller screens */
+    @media screen and (max-width: 768px) {
+      .button {
+        width: 80%;
+        font-size: 80%;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Media queries for even smaller screens */
+    @media screen and (max-width: 480px) {
+      .button {
+        width: 90%;
+        font-size: 70%;
+        margin-bottom: 15px;
+      }
     }
   </style>
 </head>
@@ -49,18 +65,18 @@
     <a href="/" class="button">Acceuil</a>
     <a href="https://www.google.com/maps/place/Paris+Institut/@48.8739761,2.2748164,14.58z/data=!4m10!1m2!2m1!1sinstitut+de+beaut%C3%A9+paris!3m6!1s0x47e66f947b33ffff:0xb63303dfa0f80981!8m2!3d48.8803121!4d2.2964902!15sChlpbnN0aXR1dCBkZSBiZWF1dMOpIHBhcmlzkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F1tfcmnf0?authuser=0"
       class="button">Plan</a>
-    <a href="mailto:institut-paris@gmail.com" class="button">Contactez nous par mail!!!</a>
-    <a href="/categories" class="button">Retour vers les catégories</a>
+    <a href="mailto:institut-paris@gmail.com" class="button">Contact</a>
+    
   </nav>
 
 
-  <!-- <a href="/" class="button" >Acceuil</a> -->
+  
   <p style="color: rgb(30, 30, 109); font-size: 500%;text-align:center">INSTITUT BIOPARIS </p>
   <p style="color: rgb(63, 68, 167); font-size: 300%;text-align:center">Tous nos produits sont bios et vegans!</p>
 
 
 
-  <!--  <p>Nombre d'éléments dans la liste: <%= categories.length %></p> -->
+ 
   <% if (categories && categories.length) { %>
     <ul style="text-align: center;list-style-type: none;font-size: 200%;color:rgb(24, 24, 74)">
       <% for (var i=0; i < categories.length; i++) { %>

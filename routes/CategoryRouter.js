@@ -7,19 +7,5 @@ routeur.post("/add",postCategory);
 routeur.put("/update",update);
 routeur.delete("/delete",deleteCategory);
 
-/* routeur.post('/delete', function async (req, res) {
-    Category.findByIdAndDelete((req.body.id),
-        function (err, data) {
-            
-            if (err) {
-                console.log(err);
-            }
-            else {
-                res.send(data);
-                console.log("Data Deleted!");
-            }
-        });
-}); */
-
 
 export default routeur;
