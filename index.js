@@ -44,6 +44,6 @@ app.listen(8082,()=>{
     console.log('Server on port 8082 listening');
 });
 
-setTimeout(()=>{
+/* setTimeout(()=>{
     process.exit(0);
-},3000); 
+},3000);  */
